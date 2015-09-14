@@ -9,10 +9,12 @@ public class Player : MonoBehaviour {
 	public float jetSpeed = 15f;
 	public float airSpeedMultiplier = .3f;
 
+	private Animator animator;
 	private PlayerController controller;
 
 	void Start(){
 		controller = GetComponent<PlayerController> ();
+		animator = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -29,12 +31,15 @@ public class Player : MonoBehaviour {
 			standing = false;
 		}
 		
-		if(controller.moving.x != 0){
-			if(absVelX < maxVelocity.x){
+		if (controller.moving.x != 0) {
+			if (absVelX < maxVelocity.x) {
 
-				forceX = standing? speed * controller.moving.x : (speed * controller.moving.x * airSpeedMultiplier);
-				transform.localScale = new Vector3(forceX > 0 ? 1 : -1, 1, 1);
+				forceX = standing ? speed * controller.moving.x : (speed * controller.moving.x * airSpeedMultiplier);
+				transform.localScale = new Vector3 (forceX > 0 ? 1 : -1, 1, 1);
 			}
+			animator.SetInteger ("AnimState", 1);
+		} else {
+			animator.SetInteger ("AnimState", 0);
 		}
 		
 		if (controller.moving.y > 0) {
