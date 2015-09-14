@@ -46,7 +46,10 @@ public class Player : MonoBehaviour {
 			if(absVelY < maxVelocity.y){
 				forceY = jetSpeed * controller.moving.y;
 
+				animator.SetInteger ("AnimState", 2);
 			}
+		}else if( absVelY > 0){
+			animator.SetInteger ("AnimState", 3);
 		}
 		
 		GetComponent<Rigidbody2D>().AddForce (new Vector2 (forceX, forceY));
