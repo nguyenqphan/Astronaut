@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="25" Column="4" />
+      <File FileName="Assets/Scripts/Player.cs" Line="37" Column="4" />
+      <File FileName="../../../Downloads/Ex_Files_Unity_2D_EssT/Exercise Files/Ch03/03_05/SuperJetroid2DDemo/Assets/Scripts/Player.cs" Line="24" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
